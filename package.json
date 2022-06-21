@@ -2,10 +2,10 @@
   "name": "checkin",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
     "dev": "nodemon ./src/main.js",
-    "serve": "node ./src/main.js"
+    "serve": "node main.js"
   },
   "keywords": [],
   "author": "",

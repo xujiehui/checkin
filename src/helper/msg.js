@@ -1,6 +1,7 @@
 module.exports = {
+  systemTips: (local = '', timezone = '') => `[系统提示]：本地时间(${local})，服务器时区(${timezone})`,
   dailyTips: {
-    success: (count, sum) => `[小贴士]：连续签到${count}天，累计签到${sum}天，${count === sum ? '加油哦' : '注意补签哦'}`,
+    success: (count = 0, sum = 0) => `[小贴士]：连续签到${count}天，累计签到${sum}天，${count === sum ? '加油哦' : '注意补签哦'}`,
     fail: (err = {}) => `[小贴士]：失败，原因：${err.err_msg || '未知'}`,
   },
   checkIn: {
@@ -22,5 +23,4 @@ module.exports = {
     success: (fulfilled = 0, rejected = 0) => `[BugFix]：消除成功${fulfilled}个，失败${rejected}个`,
     fail: (err = {}) => `[BugFix]：失败，原因：${err.err_msg || '未知'}`,
   },
-  systemTips: (local, timezone) => `[系统提示]：本地时间 ${local}，服务器时区 ${timezone}`,
 }
